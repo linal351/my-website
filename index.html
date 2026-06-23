@@ -2,32 +2,58 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>My Video Website</title>
+  <title>Ultra Video Studio</title>
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-  <header>
-    <h1>🎬 My Video Portfolio</h1>
-    <p>Welcome to my professional GitHub website</p>
+  <!-- TOP BAR -->
+  <header class="topbar">
+    <h1>🎬 Ultra Video Studio</h1>
+
+    <input type="text" id="search" placeholder="Search videos...">
+
+    <button onclick="toggleTheme()">🌙 Theme</button>
   </header>
 
-  <section class="video-section">
-    <video controls>
-      <source src="video.mp4" type="video/mp4">
-      Your browser does not support video playback.
-    </video>
+  <!-- DASHBOARD -->
+  <section class="dashboard">
+    <div class="card">🎞 Videos: 3</div>
+    <div class="card">🔥 Views: 1.2K</div>
+    <div class="card">⚡ Status: Online</div>
   </section>
 
-  <section class="buttons">
-    <a href="#video">▶ Watch Video</a>
-    <a href="https://github.com" target="_blank">My GitHub</a>
+  <!-- VIDEO GRID -->
+  <section class="grid" id="videoGrid">
+
+    <div class="video-card" onclick="openVideo('video1.mp4')">
+      <h3>Video 1</h3>
+    </div>
+
+    <div class="video-card" onclick="openVideo('video2.mp4')">
+      <h3>Video 2</h3>
+    </div>
+
+    <div class="video-card" onclick="openVideo('video3.mp4')">
+      <h3>Video 3</h3>
+    </div>
+
   </section>
+
+  <!-- VIDEO MODAL -->
+  <div id="modal" class="modal">
+    <span onclick="closeVideo()">✖</span>
+
+    <video id="player" controls>
+      <source id="source" src="">
+    </video>
+  </div>
 
   <footer>
-    <p>© 2026 My Website | Built with GitHub Pages</p>
+    <p>© Ultra Studio | GitHub Pages Powered</p>
   </footer>
 
+  <script src="script.js"></script>
 </body>
 </html>
