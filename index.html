@@ -2,56 +2,41 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Ultra Video Studio</title>
+  <title>My Cinematic Video Site</title>
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-  <!-- TOP BAR -->
-  <header class="topbar">
-    <h1>🎬 Ultra Video Studio</h1>
+  <!-- Animated background -->
+  <div class="background"></div>
 
-    <input type="text" id="search" placeholder="Search videos...">
+  <!-- HERO SECTION -->
+  <header class="hero">
+    <h1>🎬 Cinematic Video Studio</h1>
+    <p>High-quality video experience built with GitHub Pages</p>
 
-    <button onclick="toggleTheme()">🌙 Theme</button>
+    <a href="#video" class="btn">▶ Watch Now</a>
   </header>
 
-  <!-- DASHBOARD -->
-  <section class="dashboard">
-    <div class="card">🎞 Videos: 3</div>
-    <div class="card">🔥 Views: 1.2K</div>
-    <div class="card">⚡ Status: Online</div>
-  </section>
+  <!-- VIDEO SECTION -->
+  <section id="video" class="video-section">
+    <h2>Featured Video</h2>
 
-  <!-- VIDEO GRID -->
-  <section class="grid" id="videoGrid">
-
-    <div class="video-card" onclick="openVideo('video1.mp4')">
-      <h3>Video 1</h3>
-    </div>
-
-    <div class="video-card" onclick="openVideo('video2.mp4')">
-      <h3>Video 2</h3>
-    </div>
-
-    <div class="video-card" onclick="openVideo('video3.mp4')">
-      <h3>Video 3</h3>
-    </div>
-
-  </section>
-
-  <!-- VIDEO MODAL -->
-  <div id="modal" class="modal">
-    <span onclick="closeVideo()">✖</span>
-
-    <video id="player" controls>
-      <source id="source" src="">
+    <video controls>
+      <source src="video.mp4" type="video/mp4">
     </video>
-  </div>
+  </section>
+
+  <!-- INFO SECTION -->
+  <section class="info">
+    <div class="card">⚡ Fast Loading</div>
+    <div class="card">🔒 Secure HTTPS</div>
+    <div class="card">📱 Mobile Friendly</div>
+  </section>
 
   <footer>
-    <p>© Ultra Studio | GitHub Pages Powered</p>
+    <p>© 2026 Cinematic Site | Built with GitHub Pages</p>
   </footer>
 
   <script src="script.js"></script>
