@@ -1,92 +1,93 @@
 body {
   margin: 0;
-  font-family: Arial;
-  background: #0b0f1a;
+  font-family: Arial, sans-serif;
   color: white;
+  text-align: center;
+  overflow-x: hidden;
+  background: #0b0f1a;
 }
 
-/* TOP BAR */
-.topbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px;
-  background: rgba(255,255,255,0.05);
-  backdrop-filter: blur(10px);
+/* Animated background */
+.background {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, #1e3a8a, #0b0f1a);
+  animation: moveBG 8s infinite alternate;
+  z-index: -1;
 }
 
-.topbar input {
-  padding: 8px;
-  border-radius: 8px;
-  border: none;
-  width: 200px;
+@keyframes moveBG {
+  0% { filter: hue-rotate(0deg); }
+  100% { filter: hue-rotate(60deg); }
 }
 
-/* DASHBOARD */
-.dashboard {
+/* HERO */
+.hero {
+  padding: 120px 20px;
+}
+
+.hero h1 {
+  font-size: 45px;
+}
+
+.hero p {
+  opacity: 0.8;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 25px;
+  background: #38bdf8;
+  color: black;
+  text-decoration: none;
+  border-radius: 10px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  transform: scale(1.1);
+  background: white;
+}
+
+/* VIDEO */
+.video-section {
+  padding: 60px 20px;
+}
+
+video {
+  width: 85%;
+  max-width: 900px;
+  border-radius: 15px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.6);
+}
+
+/* INFO CARDS */
+.info {
   display: flex;
   justify-content: center;
-  gap: 15px;
-  margin: 20px;
+  flex-wrap: wrap;
+  margin: 40px 0;
 }
 
 .card {
   background: rgba(255,255,255,0.08);
-  padding: 15px;
-  border-radius: 10px;
-}
-
-/* VIDEO GRID */
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 15px;
+  margin: 10px;
   padding: 20px;
-}
-
-.video-card {
-  background: #1e293b;
-  padding: 40px;
-  text-align: center;
   border-radius: 12px;
-  cursor: pointer;
+  backdrop-filter: blur(10px);
+  width: 150px;
   transition: 0.3s;
 }
 
-.video-card:hover {
-  transform: scale(1.05);
-  background: #334155;
+.card:hover {
+  transform: translateY(-10px);
 }
 
-/* MODAL */
-.modal {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0,0,0,0.9);
-  justify-content: center;
-  align-items: center;
-}
-
-.modal video {
-  width: 80%;
-  max-width: 900px;
-  border-radius: 10px;
-}
-
-.modal span {
-  position: absolute;
-  top: 20px;
-  right: 30px;
-  font-size: 30px;
-  cursor: pointer;
-}
-
-/* LIGHT MODE */
-.light {
-  background: #f1f5f9;
-  color: black;
+/* FOOTER */
+footer {
+  padding: 20px;
+  opacity: 0.6;
 }
